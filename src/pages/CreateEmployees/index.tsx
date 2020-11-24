@@ -9,15 +9,7 @@ import { FcLike, FcDislike, FcDownLeft } from 'react-icons/fc';
 import { FiX } from 'react-icons/fi';
 import api from '../../services/api';
 
-import {
-  CreateContainer,
-  Field,
-  Modal,
-  Overlay,
-  Details,
-  Actions,
-  PrevPage,
-} from './styles';
+import {View, Input, BackButton} from './styles';
 
 interface Employee {
   name: string;
@@ -102,7 +94,7 @@ const CreateEmployees: React.FC = () => {
   }
 
   return (
-    <CreateContainer>
+    <View>
       <h1>Entre com os dados do funcionário</h1>
 
       {emitError === true ? (
@@ -113,14 +105,14 @@ const CreateEmployees: React.FC = () => {
         ''
       )}
 
-      <PrevPage>
+      <BackButton>
         <Link to="/">
           <MdClose size={24} />
         </Link>
-      </PrevPage>
+      </BackButton>
 
       <form onSubmit={handleSubmit}>
-        <Field>
+        <Input>
           <p>Nome:</p>
           <input
             type="text"
@@ -128,9 +120,9 @@ const CreateEmployees: React.FC = () => {
             value={name}
             onChange={event => setName(event.target.value)}
           />
-        </Field>
+        </Input>
 
-        <Field>
+        <Input>
           <p>Função:</p>
           <input
             type="text"
@@ -138,9 +130,9 @@ const CreateEmployees: React.FC = () => {
             value={role}
             onChange={event => setRole(event.target.value)}
           />
-        </Field>
+        </Input>
 
-        <Field>
+        <Input>
           <p>Departamento:</p>
           <input
             type="text"
@@ -148,9 +140,9 @@ const CreateEmployees: React.FC = () => {
             value={department}
             onChange={event => setDepartment(event.target.value)}
           />
-        </Field>
+        </Input>
 
-        <Field>
+        <Input>
           <p>Email:</p>
           <input
             type="text"
@@ -158,9 +150,9 @@ const CreateEmployees: React.FC = () => {
             value={email}
             onChange={event => setEmail(event.target.value)}
           />
-        </Field>
+        </Input>
 
-        <Field>
+        <Input>
           <p>Telefone:</p>
           <input
             type="text"
@@ -168,16 +160,16 @@ const CreateEmployees: React.FC = () => {
             value={phone}
             onChange={event => setPhone(event.target.value)}
           />
-        </Field>
+        </Input>
 
-        <Field>
+        <Input>
           <p>Foto:</p>
           <input type="file" id="avatar" onChange={handleAddImage} />
-        </Field>
+        </Input>
 
         <button type="submit">Cadastrar</button>
       </form>
-    </CreateContainer>
+    </View>
   );
 };
 

@@ -8,7 +8,7 @@ import { SiWhatsapp } from 'react-icons/si';
 import { MdClose } from 'react-icons/md';
 
 
-import { DetailsContainer, Employee, PrevPage, Info } from './styles';
+import { View, BackButton, Info } from './styles';
 
 import api from '../../services/api';
 
@@ -49,12 +49,12 @@ const Details: React.FC<RouteComponentProps<MatchParams>> = props => {
   }, [id]);
 
   return (
-    <DetailsContainer>
-      <PrevPage>
+    <View>
+      <BackButton>
         <Link to="/">
           <MdClose size={24} />
         </Link>
-      </PrevPage>
+      </BackButton>
 
       <h1>Funcionário</h1>
       {employee !== undefined ? (
@@ -80,9 +80,9 @@ const Details: React.FC<RouteComponentProps<MatchParams>> = props => {
           </div>
         </Info>
 ) : (
-        'Carregando'
+        'Loading'
       )}
-    </DetailsContainer>
+    </View>
   );
 };
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const DetailsContainer = styled.main`
+export const View = styled.main`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,27 +60,8 @@ export const Info = styled.div`
         }
 `;
 
-export const Employee = styled.div`
- text-align: left;
- background-color: '#000'
-  p {
-    font-size: 1rem;
-    padding: 0.4rem;
-  }
 
-  section > p {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  section > p > svg {
-    margin-left: 0.4rem;
-    color: #25d366;
-  }
-`;
-
-export const PrevPage = styled.div`
+export const BackButton = styled.div`
   position: absolute;
   top: 1rem;
   left: 1rem;

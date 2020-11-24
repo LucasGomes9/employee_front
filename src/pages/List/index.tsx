@@ -8,7 +8,7 @@ import { FcLike, FcDislike, FcDownLeft } from 'react-icons/fc';
 
 import api from '../../services/api';
 
-import { HomeContainer, Employee, Actions, PrevPage } from './styles';
+import { View, Employee, Actions, BackButton } from './styles';
 
 interface EmployeeApiData {
   id: string;
@@ -58,14 +58,14 @@ const Home: React.FC = () => {
   }, [reload]);
 
   return (
-    <HomeContainer>
+    <View>
       <h1>Employees</h1>
 
-      <PrevPage>
+      <BackButton>
         <Link to="/">
           <MdClose size={24} />
         </Link>
-      </PrevPage>
+      </BackButton>
 
       {employees.length > 0 ? (
         employees.map(employee => (
@@ -105,7 +105,7 @@ const Home: React.FC = () => {
       ) : (
         <h5>Nenhum funcionario cadastrado</h5>
       )}
-    </HomeContainer>
+    </View>
   );
 };
 

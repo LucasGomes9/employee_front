@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CreateContainer = styled.main`
+export const View = styled.main`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ export const CreateContainer = styled.main`
   }
 `;
 
-export const Field = styled.div`
+export const Input = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0.8rem 0;
@@ -88,137 +88,7 @@ export const Field = styled.div`
   }
 `;
 
-export const Modal = styled.div`
-  position: fixed;
-  background: rgba(0, 0, 0, 0.2);
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Overlay = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  height: 90vh;
-  background: #ffffff;
-  color: #000000;
-  padding: 0.4rem;
-
-  span {
-    position: absolute;
-    top: 0.4rem;
-    right: 0.4rem;
-    svg {
-      color: black;
-      cursor: pointer;
-    }
-  }
-
-  @media (max-width: 700px) {
-    width: 90vw;
-  }
-`;
-
-export const Details = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100%;
-  width: 100%;
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-      margin-bottom: 1rem;
-    }
-
-    article h2 {
-      padding: 0.8rem;
-    }
-
-    img {
-      width: 80%;
-      height: 20rem;
-      border-radius: 0.4rem;
-    }
-  }
-
-  div + div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 700px) {
-    display: flex;
-    flex-direction: column;
-
-    img {
-      width: 200px;
-      padding: 1rem;
-    }
-  }
-`;
-
-export const Actions = styled.div`
-  padding: 0.4rem;
-  background: #011627;
-  border-radius: 0.4rem;
-  margin: 1rem 0;
-
-  span {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 1rem;
-    position: initial;
-    color: #ffffff;
-    font-weight: bold;
-
-    strong {
-      margin: 0 0.2rem;
-    }
-
-    svg {
-      color: white;
-    }
-  }
-
-  span + span {
-    margin-left: 0.4rem;
-  }
-
-  span:nth-child(4n) {
-    padding: 0.4rem;
-    background: #ffffff;
-    border-radius: 0.2rem;
-    text-decoration: none;
-
-    a {
-      color: #000000;
-    }
-  }
-
-  @media (max-width: 700px) {
-    width: 60vw;
-    padding: 0.8rem;
-  }
-`;
-
-export const PrevPage = styled.div`
+export const BackButton = styled.div`
   position: absolute;
   top: 1rem;
   left: 1rem;

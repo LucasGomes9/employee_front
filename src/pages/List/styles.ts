@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HomeContainer = styled.main`
+export const View = styled.main`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ export const HomeContainer = styled.main`
   }
 `;
 
-export const PrevPage = styled.div`
+export const BackButton = styled.div`
   position: absolute;
   top: 1rem;
   left: 1rem;

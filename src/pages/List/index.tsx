@@ -92,7 +92,7 @@ const Home: React.FC = () => {
             </span>
             <Actions>
               <Link
-                to="/home"
+                to="/list"
                 onClick={() => handleDeleteEmployee(employee.id)}
               >
                 <MdDelete size={20} />
